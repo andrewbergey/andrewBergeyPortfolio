@@ -107,12 +107,11 @@ body {
 }
 .welcome-text {
   margin: 85px 30px 0 30px;
-  transform: translate(5vw, -15px);
 }
 .welcome-text h2 {
   display: inline;
   position: relative;
-  font-size: 3rem;
+  font-size: 4em;
   transition: top 0.3s ease-in, color 0.15s ease-in;
   margin: -3px;
   color: white;
@@ -121,14 +120,14 @@ body {
   white-space: nowrap;
 }
 .welcome-text h3 {
-  font-size: 1.75rem;
+  font-size: 2em;
   font-weight: 300;
   padding-top: 10px;
   padding-bottom: 5px;
   transform: translate(0, -5px);
 }
 .welcome-text p {
-  font-size: 1.3rem;
+  font-size: 1.1em;
 }
 .welcome-image {
   width: 50vh;
@@ -142,6 +141,7 @@ body {
   display: grid;
   column-gap: 15px;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  justify-items: center;
 }
 .about-layout h2 {
   font-size: 2rem;
@@ -161,14 +161,13 @@ body {
   padding-bottom: 30px;
 }
 .logosOverlay img {
+  width: 305px;
   height: 200px;
   border-radius: 20px;
 }
 .logosOverlay {
-  width: fit-content;
-  height: fit-content;
-  position: relative;
-  left: 15%;
+  text-align: center;
+  justify-content: center;
   border-radius: 20px;
   margin-bottom: 60px;
   padding-bottom: 60px;
@@ -180,9 +179,8 @@ body {
 .logosOverlay:hover::after {
   content: "";
   position: absolute;
-  top: 0;
-  left: 0;
-  width: 323px;
+  transform: translate(-305px);
+  width: 305px;
   height: 200px;
   border-radius: 20px;
   background-image: linear-gradient(
@@ -222,36 +220,15 @@ body {
   height: 198px;
   position: relative;
   text-align: center;
-  margin-bottom: 80px;
+  margin-bottom: 120px;
 }
 @keyframes bsuLogoEffect {
   to {
     box-shadow: 10px 10px cyan;
   }
 }
-@media all and (max-width: 1325px) {
-  .about-layout {
-    grid-template-columns: repeat(2, minmax(100px, 1fr));
-  }
-  #education img {
-    width: 25vw;
-    height: 18vw;
-    position: relative;
-  }
-  .logosOverlay img {
-    width: 25vw;
-    height: 18vw;
-    transform: translate(4vw);
-  }
-  .logosOverlay:hover::after {
-    width: 25vw;
-    height: 18vw;
-    transform: translate(4vw);
-  }
-}
 /* Project Page */
 .project-layout {
-  /* border: 2px solid red; */
   display: flex;
   width: 100vw;
   padding: 130px 30px 0 30px;
@@ -353,6 +330,43 @@ body {
   width: 4px;
   height: 30%;
   background: gray;
+}
+/* Media Query for all pages */
+@media all and (max-width: 1325px) {
+  .about-layout {
+    grid-template-columns: 95vw;
+    margin-left: 15px;
+  }
+  #education img {
+    width: 25vw;
+    height: 18vw;
+    position: relative;
+  }
+  .logosOverlay img {
+    width: 25vw;
+    height: 18vw;
+  }
+  .logosOverlay:hover::after {
+    width: 25vw;
+    height: 18vw;
+    transform: translate(-25vw);
+  }
+  .heading {
+    font-size: 2em;
+  }
+  .welcome-text h2 {
+    font-size: 5vw;
+  }
+  .welcome-text h3 {
+    font-size: 4vw;
+  }
+  .welcome-text p {
+    font-size: 3vw;
+  }
+  .welcome-image {
+    width: 80vw;
+    max-width: 50vh;
+  }
 }
 /* Calculator CSS */
 .calcgrid {
