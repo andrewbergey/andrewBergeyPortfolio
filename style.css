@@ -262,7 +262,7 @@ body {
     transform: translate(-25vw);
   }
   .heading {
-    font-size: 2em;
+    font-size: 7vw;
   }
   .dropdown {
     transform: translate(-250px);
@@ -285,6 +285,12 @@ body {
   .welcome-image {
     width: 80vw;
     max-width: 50vh;
+  }
+  .clock {
+    transform: translate(-12px);
+  }
+  .dropdown {
+    transform: translate(-235px);
   }
 }
 /* Clock CSS */
