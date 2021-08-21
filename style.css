@@ -103,14 +103,14 @@ body {
   align-items: center;
   grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
   height: 100vh;
-  text-align: center;
+  justify-items: center;
 }
 .welcome-text {
-  margin: 85px 30px 0 30px;
+  text-align: center;
+  margin-top: 20px;
 }
 .welcome-text h2 {
   display: inline;
-  position: relative;
   font-size: 4em;
   transition: top 0.3s ease-in, color 0.15s ease-in;
   margin: -3px;
@@ -240,7 +240,46 @@ body {
 .project1 * {
   padding: 10px;
 }
-
+/* Media Query for all pages */
+@media all and (max-width: 1325px) {
+  .about-layout {
+    grid-template-columns: 95vw;
+    margin-left: 15px;
+  }
+  #education img {
+    width: 25vw;
+    height: 18vw;
+    position: relative;
+  }
+  .logosOverlay img {
+    width: 25vw;
+    height: 18vw;
+  }
+  .logosOverlay:hover::after {
+    width: 25vw;
+    height: 18vw;
+    transform: translate(-25vw);
+  }
+  .heading {
+    font-size: 2em;
+  }
+  .dropdown {
+    transform: translate(-250px);
+  }
+  .welcome-text h2 {
+    font-size: 5vw;
+  }
+  .welcome-text h3 {
+    font-size: 4vw;
+  }
+  .welcome-text p {
+    font-size: 3vw;
+  }
+  .welcome-image {
+    width: 80vw;
+    max-width: 50vh;
+  }
+}
 /* Clock CSS */
 .clock {
   background: white;
@@ -331,43 +370,7 @@ body {
   height: 30%;
   background: gray;
 }
-/* Media Query for all pages */
-@media all and (max-width: 1325px) {
-  .about-layout {
-    grid-template-columns: 95vw;
-    margin-left: 15px;
-  }
-  #education img {
-    width: 25vw;
-    height: 18vw;
-    position: relative;
-  }
-  .logosOverlay img {
-    width: 25vw;
-    height: 18vw;
-  }
-  .logosOverlay:hover::after {
-    width: 25vw;
-    height: 18vw;
-    transform: translate(-25vw);
-  }
-  .heading {
-    font-size: 2em;
-  }
-  .welcome-text h2 {
-    font-size: 5vw;
-  }
-  .welcome-text h3 {
-    font-size: 4vw;
-  }
-  .welcome-text p {
-    font-size: 3vw;
-  }
-  .welcome-image {
-    width: 80vw;
-    max-width: 50vh;
-  }
-}
+
 /* Calculator CSS */
 .calcgrid {
   padding-top: 80px;
