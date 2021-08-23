@@ -162,7 +162,7 @@ body {
   padding-bottom: 30px;
 }
 .logosOverlay img {
-  width: 305px;
+  width: 320px;
   height: 200px;
   border-radius: 20px;
 }
@@ -180,8 +180,8 @@ body {
 .logosOverlay:hover::after {
   content: "";
   position: absolute;
-  transform: translate(-305px);
-  width: 305px;
+  transform: translate(-100%);
+  width: 320px;
   height: 200px;
   border-radius: 20px;
   background-image: linear-gradient(
@@ -221,7 +221,7 @@ body {
   height: 198px;
   position: relative;
   text-align: center;
-  margin-bottom: 120px;
+  padding-bottom: 150px;
 }
 @keyframes bsuLogoEffect {
   to {
@@ -248,24 +248,26 @@ body {
     margin-left: 15px;
   }
   #education img {
-    width: 25vw;
-    height: 18vw;
+    width: 35vw;
+    height: 25vw;
+    max-width: 320px;
+    max-height: 200px;
     position: relative;
   }
   .logosOverlay img {
-    width: 25vw;
-    height: 18vw;
+    width: 35vw;
+    height: 25vw;
+    max-width: 320px;
+    max-height: 200px;
   }
   .logosOverlay:hover::after {
-    width: 25vw;
-    height: 18vw;
-    transform: translate(-25vw);
+    width: 35vw;
+    height: 25vw;
+    max-width: 320px;
+    max-height: 200px;
   }
   .heading {
-    font-size: 7vw;
-  }
-  .dropdown {
-    transform: translate(-250px);
+    font-size: min(5vw, 2.5rem);
   }
   .welcome-layout {
     grid-template-columns: 1fr;
