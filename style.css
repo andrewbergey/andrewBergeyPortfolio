@@ -286,7 +286,7 @@ body {
   }
   .welcome-image {
     width: 80vw;
-    max-width: 50vh;
+    max-width: 40vh;
   }
   .clock {
     transform: translate(-12px);
