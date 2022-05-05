@@ -244,6 +244,7 @@ body {
   margin-right: auto;
   padding-top: 100px;
   width: 60vw;
+  min-width: 50vh;
 }
 
 /* Project Page */
