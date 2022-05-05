@@ -23,6 +23,7 @@ body {
     rgb(15, 200, 92),
     rgb(19, 206, 253)
   );
+  /* background: #333; */
   opacity: 0.6;
   z-index: -15;
 }
@@ -55,7 +56,7 @@ body {
   width: 100px;
   text-align: center;
   cursor: pointer;
-  font-size: 75px;
+  font-size: min(25vw, 75px);
   position: absolute;
   top: -10px;
   left: -20px;
@@ -133,8 +134,8 @@ body {
 }
 .welcome-image {
   width: 27vw;
+  transform: translate(0, 10px);
   border-radius: 50%;
-  transform: translate(0,10px);
   box-shadow: 0 0 5px 7px white;
 }
 /* About Page */
@@ -164,8 +165,10 @@ body {
   padding-bottom: 30px;
 }
 .logosOverlay img {
-  width: 320px;
-  height: 200px;
+  width: 35vw;
+  height: 25vw;
+  max-width: 320px;
+  max-height: 200px;
   border-radius: 20px;
 }
 .logosOverlay {
@@ -183,8 +186,10 @@ body {
   content: "";
   position: absolute;
   transform: translate(-100%);
-  width: 320px;
-  height: 200px;
+  width: 35vw;
+  height: 25vw;
+  max-width: 320px;
+  max-height: 200px;
   border-radius: 20px;
   background-image: linear-gradient(
     135deg,
@@ -211,8 +216,10 @@ body {
 }
 #education img {
   border-radius: 20px;
-  width: 320px;
-  height: 200px;
+  width: 35vw;
+  height: 25vw;
+  max-width: 320px;
+  max-height: 200px;
   transition: all 0.7s;
 }
 #education img:hover {
@@ -223,13 +230,22 @@ body {
   height: 198px;
   position: relative;
   text-align: center;
-  padding-bottom: 150px;
+  padding-bottom: 20%;
 }
 @keyframes bsuLogoEffect {
   to {
     box-shadow: 10px 10px cyan;
   }
 }
+/* Resume Page */
+.resumePhoto img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  padding-top: 100px;
+  width: 60vw;
+}
+
 /* Project Page */
 .project-layout {
   display: flex;
@@ -243,69 +259,18 @@ body {
 .project1 * {
   padding: 10px;
 }
-/* Media Query for all pages */
-@media all and (max-width: 1325px) {
-  .about-layout {
-    grid-template-columns: 95vw;
-    margin-left: 15px;
-  }
-  #education img {
-    width: 35vw;
-    height: 25vw;
-    max-width: 320px;
-    max-height: 200px;
-    position: relative;
-  }
-  .logosOverlay img {
-    width: 35vw;
-    height: 25vw;
-    max-width: 320px;
-    max-height: 200px;
-  }
-  .logosOverlay:hover::after {
-    width: 35vw;
-    height: 25vw;
-    max-width: 320px;
-    max-height: 200px;
-  }
-  .heading {
-    font-size: min(5vw, 2.5rem);
-  }
-  .welcome-layout {
-    grid-template-columns: 1fr;
-  }
-  .welcome-text {
-    margin-top: 50px;
-  }
-  .welcome-text h2 {
-    font-size: 5vw;
-  }
-  .welcome-text h3 {
-    font-size: 4vw;
-  }
-  .welcome-text p {
-    font-size: 3vw;
-  }
-  .welcome-image {
-    width: 80vw;
-    max-width: 40vh;
-  }
-  .clock {
-    transform: translate(-12px);
-  }
-  .dropdown {
-    transform: translate(-235px);
-  }
-}
+
 /* Clock CSS */
 .clock {
   background: white;
-  width: 67px;
-  height: 67px;
+  width: 20vw;
+  max-width: 67px;
+  height: 20vw;
+  max-height: 67px;
   border-radius: 50%;
   position: absolute;
   top: 12px;
-  left: 20px;
+  left: 12px;
 }
 .clock .number {
   color: black;
@@ -387,7 +352,38 @@ body {
   height: 30%;
   background: gray;
 }
-
+/* Media Query for all pages */
+@media all and (max-width: 1325px) {
+  .about-layout {
+    grid-template-columns: 95vw;
+    margin-left: 15px;
+  }
+  .heading {
+    font-size: min(6vw, 2.5rem);
+  }
+  .welcome-layout {
+    grid-template-columns: 1fr;
+  }
+  .welcome-text {
+    margin-top: 50px;
+  }
+  .welcome-text h2 {
+    font-size: 5vw;
+  }
+  .welcome-text h3 {
+    font-size: 4vw;
+  }
+  .welcome-text p {
+    font-size: 3vw;
+  }
+  .welcome-image {
+    width: 80vw;
+    max-width: 40vh;
+  }
+  .dropdown {
+    transform: translate(-235px);
+  }
+}
 /* Calculator CSS */
 .calcgrid {
   padding-top: 80px;
