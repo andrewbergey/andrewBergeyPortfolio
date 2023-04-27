@@ -20,11 +20,10 @@ body {
   height: 100vh;
   background-image: linear-gradient(
     to top right,
-    rgb(15, 200, 92),
-    rgb(19, 206, 253)
+    rgb(100, 100, 100),
+    rgb(20, 20, 20)
   );
-  /* background: #333; */
-  opacity: 0.6;
+  opacity: 0.8;
   z-index: -15;
 }
 .background-overlay img {
