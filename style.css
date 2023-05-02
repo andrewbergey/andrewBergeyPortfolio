@@ -43,8 +43,10 @@ html, body {
   position: absolute;
   left: 50vw;
   transform: translate(-50%);
+
 }
 .dropdown {
+  width: 100px;
   top: 20px;
   position: relative;
   left: 100vw;
@@ -102,11 +104,12 @@ html, body {
   display: grid;
   align-items: center;
   grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
-  height: calc(100vh - 80px);
-  transform: translate(0, 80px);
+  height: 100vh;
   text-align: center;
+  z-index: 15;
 }
 .welcome-text {
+  transform: translate(0, 40px);
   margin-top: 20px;
   margin-left: 10px;
 }
@@ -133,7 +136,7 @@ html, body {
 }
 .welcome-image {
   width: 27vw;
-  transform: translate(0, 10px);
+  transform: translate(0, 50px);
   border-radius: 50%;
   box-shadow: 0 0 5px 7px white;
 }
