@@ -19,3 +19,5 @@ heading2[i].addEventListener('mouseover', ()=>{heading2[i].style.setProperty('to
 heading2[i].addEventListener('mouseout', ()=>{heading2[i].style.color = 'white'});
 heading2[i].addEventListener('mouseout', ()=>{heading2[i].style.setProperty('top', '0')});
    }  
+
+

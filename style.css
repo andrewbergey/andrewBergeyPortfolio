@@ -3,7 +3,7 @@
   margin: 0;
   padding: 0;
 }
-body {
+html, body {
   margin: 0;
   padding: 0;
   color: #fff;
@@ -20,10 +20,10 @@ body {
   height: 100vh;
   background-image: linear-gradient(
     to top right,
-    rgb(15, 200, 92),
-    rgb(19, 206, 253)
+    rgb(100, 100, 100),
+    rgb(20, 20, 20)
   );
-  opacity: 0.6;
+  opacity: 0.8;
   z-index: -15;
 }
 .background-overlay img {
@@ -55,7 +55,7 @@ body {
   width: 100px;
   text-align: center;
   cursor: pointer;
-  font-size: 75px;
+  font-size: min(25vw, 75px);
   position: absolute;
   top: -10px;
   left: -20px;
@@ -102,17 +102,18 @@ body {
   display: grid;
   align-items: center;
   grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
-  height: 100vh;
+  height: calc(100vh - 80px);
+  transform: translate(0, 80px);
   text-align: center;
 }
 .welcome-text {
-  margin: 85px 30px 0 30px;
-  transform: translate(5vw, -15px);
+  margin-top: 20px;
+  margin-left: 10px;
 }
 .welcome-text h2 {
   display: inline;
   position: relative;
-  font-size: 3rem;
+  font-size: 4em;
   transition: top 0.3s ease-in, color 0.15s ease-in;
   margin: -3px;
   color: white;
@@ -121,17 +122,18 @@ body {
   white-space: nowrap;
 }
 .welcome-text h3 {
-  font-size: 1.75rem;
+  font-size: 2em;
   font-weight: 300;
   padding-top: 10px;
   padding-bottom: 5px;
   transform: translate(0, -5px);
 }
 .welcome-text p {
-  font-size: 1.3rem;
+  font-size: 1.1em;
 }
 .welcome-image {
-  width: 50vh;
+  width: 27vw;
+  transform: translate(0, 10px);
   border-radius: 50%;
   box-shadow: 0 0 5px 7px white;
 }
@@ -139,9 +141,6 @@ body {
 .about-layout {
   padding-top: 130px;
   margin: 0 30px 0 30px;
-  display: grid;
-  column-gap: 15px;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
 }
 .about-layout h2 {
   font-size: 2rem;
@@ -151,27 +150,22 @@ body {
   font-size: 1.2rem;
   margin: 20px;
 }
-.about-layout li {
-  font-size: 1.2rem;
-  padding: 0.3rem;
-  margin: 20px;
-}
-.about-layout ul {
-  min-height: 320px;
-  padding-bottom: 30px;
+.img-layout {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  padding-top: 20px;  
 }
 .logosOverlay img {
-  height: 200px;
+  width: 35vw;
+  height: 25vw;
+  max-width: 320px;
+  max-height: 200px;
   border-radius: 20px;
 }
 .logosOverlay {
-  width: fit-content;
-  height: fit-content;
-  position: relative;
-  left: 15%;
+  justify-self: right;
   border-radius: 20px;
-  margin-bottom: 60px;
-  padding-bottom: 60px;
+  margin-right: 12vw;
   transition: all 0.7s;
 }
 .logosOverlay:hover {
@@ -180,10 +174,11 @@ body {
 .logosOverlay:hover::after {
   content: "";
   position: absolute;
-  top: 0;
-  left: 0;
-  width: 323px;
-  height: 200px;
+  transform: translate(-100%);
+  width: 35vw;
+  height: 25vw;
+  max-width: 320px;
+  max-height: 200px;
   border-radius: 20px;
   background-image: linear-gradient(
     135deg,
@@ -208,72 +203,69 @@ body {
     background-position: left;
   }
 }
-#education img {
+#bsuImg {
+  justify-self: left;
+  padding-left: 12vw;
+}
+#bsuImg img {
   border-radius: 20px;
-  width: 320px;
-  height: 200px;
+  width: 35vw;
+  height: 25vw;
+  max-width: 320px;
+  max-height: 200px;
   transition: all 0.7s;
 }
-#education img:hover {
+#bsuImg img:hover {
   animation: bsuLogoEffect 0.5s linear forwards;
   transform: translate(-10px, -10px);
 }
-.bsuOverlay {
-  height: 198px;
-  position: relative;
-  text-align: center;
-  margin-bottom: 80px;
-}
+
 @keyframes bsuLogoEffect {
   to {
     box-shadow: 10px 10px cyan;
   }
 }
-@media all and (max-width: 1325px) {
-  .about-layout {
-    grid-template-columns: repeat(2, minmax(100px, 1fr));
-  }
-  #education img {
-    width: 25vw;
-    height: 18vw;
-    position: relative;
-  }
-  .logosOverlay img {
-    width: 25vw;
-    height: 18vw;
-    transform: translate(4vw);
-  }
-  .logosOverlay:hover::after {
-    width: 25vw;
-    height: 18vw;
-    transform: translate(4vw);
-  }
+
+/* Resume Page */
+.resumePhoto img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 50px;
+  padding-top: 100px;
+  height: auto;
+  width: 80vh;
+  max-width: 98%;
 }
+
 /* Project Page */
 .project-layout {
-  /* border: 2px solid red; */
-  display: flex;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(230px, 20vw));
   width: 100vw;
-  height: 100vh;
-  padding: 130px 30px 0 30px;
+  padding: 130px 50px 0px 50px;
 }
-.project1 {
-  width: 300px;
-  margin: 30px;
+.projects {
+  padding: 15px;
 }
-.project1 * {
-  padding: 10px;
+.projects h2{
+  padding-bottom: 10px;
+}
+.projects p{
+  padding-top: 10px;
 }
 
 /* Clock CSS */
 .clock {
   background: white;
-  width: 67px;
-  height: 67px;
+  width: 20vw;
+  max-width: 67px;
+  height: 20vw;
+  max-height: 67px;
   border-radius: 50%;
   position: absolute;
   top: 12px;
-  left: 20px;
+  left: 12px;
 }
 .clock .number {
   color: black;
@@ -354,6 +346,38 @@ body {
   width: 4px;
   height: 30%;
   background: gray;
+}
+/* Media Query for all pages */
+@media all and (max-width: 1325px) {
+  .about-layout {
+    grid-template-columns: 95vw;
+    margin-left: 15px;
+  }
+  .heading {
+    font-size: min(6vw, 2.5rem);
+  }
+  .welcome-layout {
+    grid-template-columns: 1fr;
+  }
+  .welcome-text {
+    margin-top: 50px;
+  }
+  .welcome-text h2 {
+    font-size: 5vw;
+  }
+  .welcome-text h3 {
+    font-size: 4vw;
+  }
+  .welcome-text p {
+    font-size: 3vw;
+  }
+  .welcome-image {
+    width: 80vw;
+    max-width: 40vh;
+  }
+  .dropdown {
+    transform: translate(-235px);
+  }
 }
 /* Calculator CSS */
 .calcgrid {
