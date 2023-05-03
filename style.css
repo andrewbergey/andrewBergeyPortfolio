@@ -43,7 +43,6 @@ html, body {
   position: absolute;
   left: 50vw;
   transform: translate(-50%);
-
 }
 .dropdown {
   width: 100px;
@@ -143,20 +142,20 @@ html, body {
 /* About Page */
 .about-layout {
   padding-top: 130px;
-  margin: 0 30px 0 30px;
+  margin: 0 5vw 0 5vw;
 }
 .about-layout h2 {
   font-size: 2rem;
   text-align: center;
 }
 .about-layout p {
-  font-size: 1.2rem;
+  font-size: 1.3rem;
   margin: 20px;
 }
 .img-layout {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  padding-top: 20px;  
+  padding-top: 5vh;  
 }
 .logosOverlay img {
   width: 35vw;
